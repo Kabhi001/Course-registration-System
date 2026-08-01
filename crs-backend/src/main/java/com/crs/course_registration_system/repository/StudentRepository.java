@@ -1,0 +1,14 @@
+package com.crs.course_registration_system.repository;
+
+import com.crs.course_registration_system.entity.Student;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+public interface StudentRepository
+        extends JpaRepository<Student, Long> {
+
+    List<Student> findByCoursesId(Long courseId);
+}
+
+//class
